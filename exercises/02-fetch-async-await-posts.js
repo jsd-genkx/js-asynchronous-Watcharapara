@@ -8,3 +8,21 @@ TODO-01: Create a function named fetchPostsAsync
 
 TODO-02: Export fetchPostsAsync and test it in main.js 
 */
+
+const fetchDataAsync = async () => {
+	const endpoint = "https://dummyjson.com/posts";
+	try {
+		const response = await fetch(endpoint);
+		if (!response.ok) {
+			throw new Error("Failed to fetch posts");
+		}
+		const data = await response.json();
+		console.log(data.posts[1]);
+
+	} catch (error) {
+		console.log("Error occurred: ", error);
+	}
+};
+
+fetchDataAsync();
+
