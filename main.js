@@ -18,7 +18,7 @@ const runButton = document.getElementById("runCodeBtn");
 
 runButton.addEventListener("click", () => {
 	/* 01-sync-basic.js */
-	syncBasic();
+	// syncBasic();
 	/* 02-sync-blocking.js */
 	// syncBlocking();
 	/* 03-sync-optimize.js */
